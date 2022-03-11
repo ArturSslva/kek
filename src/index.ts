@@ -33,6 +33,7 @@ app.post('/contactEmail', (request: Request, response: Response) => {
     console.log("Teste");
 });
 
-// app.get('/', (request: Request, response: Response) =>{
-//     console.log('Entrou');
-// });
+app.get('/', (request: Request, response: Response) =>{
+    
+    return response.send('Entrou');
+});
