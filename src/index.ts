@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-app.use(express.static(__dirname + '/dist'));
+// app.use(express.static(__dirname + '/dist'));
 
 app.listen( process.env.PORT || 8080, () =>{
     console.log('API RODANDO');
@@ -35,5 +35,4 @@ app.post('/contactEmail', (request: Request, response: Response) => {
 
 app.get('/', (request: Request, response: Response) =>{
     console.log('Entrou');
-    response.sendFile(__dirname + "/index.html");
 });
