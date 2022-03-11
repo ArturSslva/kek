@@ -21,8 +21,8 @@ app.post('/contactEmail', (request: Request, response: Response) => {
     console.log(nameEmail);
     console.log(emailAdress);
     console.log(emailContent);
-    
-    console.log("Teste");
+
+    return response.send('https://www.youtube.com/watch?v=r9Jy5mAhzf8');
 });
 
 app.get('/', (request: Request, response: Response) =>{

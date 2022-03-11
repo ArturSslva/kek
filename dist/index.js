@@ -18,7 +18,7 @@ app.post('/contactEmail', (request, response) => {
     console.log(nameEmail);
     console.log(emailAdress);
     console.log(emailContent);
-    console.log("Teste");
+    return response.send('https://www.youtube.com/watch?v=r9Jy5mAhzf8');
 });
 app.get('/', (request, response) => {
     return response.send('API RODANDO');
