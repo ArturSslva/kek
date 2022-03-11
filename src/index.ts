@@ -33,5 +33,5 @@ app.post('/contactEmail', (request: Request, response: Response) => {
 
 app.get('/', (request: Request, response: Response) =>{
     console.log('Entrou');
-    response.sendFile(__dirname + "/index.html");
+    response.sendFile(__dirname + "./index.html");
 });
