@@ -18,7 +18,8 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "start": "node ./dist"
+    "start": "node ./dist",
+    "build": "tsc"
   },
   "engines" : { 
     "node" : "16.13.1"

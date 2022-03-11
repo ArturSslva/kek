@@ -10,10 +10,10 @@ app.use(express_1.default.urlencoded({ extended: false }));
 app.listen(process.env.PORT || 8080, () => {
     console.log('API RODANDO');
 });
-app.route('/').get((request, response) => {
-    console.log('Entrou');
-    response.sendFile(__dirname + "/index.html");
-});
+// app.route('/').get((request: Request, response: Response) =>{
+//     console.log('Entrou');
+//     response.sendFile(__dirname + "/index.html");
+// });
 app.post('/contactEmail', (request, response) => {
     const nameEmail = request.body.name;
     const emailContent = request.body.emailContent;
@@ -24,7 +24,7 @@ app.post('/contactEmail', (request, response) => {
     response.send('form recebido');
     console.log("Teste");
 });
-// app.get('/', (request: Request, response: Response) =>{
-//     console.log('Entrou');
-//     response.sendFile(__dirname + "/index.html");
-// });
+app.get('/', (request, response) => {
+    console.log('Entrou');
+    response.sendFile(__dirname + "./index.html");
+});
