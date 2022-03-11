@@ -7,6 +7,9 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
+app.use(express_1.default.static(__dirname + '/css'));
+app.use(express_1.default.static(__dirname + '/images'));
+app.use(express_1.default.static(__dirname + '/js'));
 app.listen(process.env.PORT || 8080, () => {
     console.log('API RODANDO');
 });
@@ -26,5 +29,5 @@ app.post('/contactEmail', (request, response) => {
 });
 app.get('/', (request, response) => {
     console.log('Entrou');
-    response.sendFile(__dirname + "./index.html");
+    response.sendFile(__dirname + "/index.html");
 });
